@@ -97,12 +97,7 @@ function execute(command) {
     clone.id = "prev_help";
     elem.appendChild(clone);
   } else if (command == "exit") {
-    var tag = document.createElement("p");
-    var text = document.createTextNode(
-      window.location.href = "./index.html"
-    );
-    tag.appendChild(text);
-    elem.appendChild(tag);
+    window.location.href = "./index.html"
   } else {
     // command not found
     var tag = document.createElement("p");
