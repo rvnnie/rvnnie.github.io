@@ -99,7 +99,7 @@ function execute(command) {
   } else if (command == "exit") {
     var tag = document.createElement("p");
     var text = document.createTextNode(
-      "I cannot close this window unfortunately, otherwise, bye."
+      window.location.href = "./index.html"
     );
     tag.appendChild(text);
     elem.appendChild(tag);

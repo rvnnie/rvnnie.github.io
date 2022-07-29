@@ -1,0 +1,64 @@
+<!-- A Terminal-Like Interface To Represent My Porfolio -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS w/ Bootstrap-->
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <!-- Boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <title>rsh</title>
+  </head>
+  <body>
+    <!-- Previous contains all text above where the user types commands in, including  previously
+         typed in commands-->
+    <div id="previous">
+      <p id="intro_prompt">
+        Welcome to Ronnie Keating's Portfolio! This is a command line-like
+        interface using HTML, CSS, and JavaScript. <p>Type 'help' (without
+        quotes) for a list of commands or type 'resume' to view my resume.</p>
+      </p>
+    </div>
+    
+    <!-- Hidden elements for store and fetching items, makes JS a lot easier -->
+    <div id="history"></div>
+    <div id="help">
+      <p>Currently available commands:</p>
+      <p>clear: clears screen. Also takes the argument 'history' to clear history.</p>
+      <p>echo: outputs whatever text proceeds it.</p>
+      <p>ls: lists the files in the directory (very cheesy, not legit at all).</p>
+      <p>resume: redirects to a pdf of my resume.</p>
+      <p>history: prints out command history.</p>
+    </div>
+
+    <!-- This is the terminal prompt that stays consistent throughout the program-->
+    <div id="terminal">
+      <span class="prompt"> 
+        <label for="command">
+          <b>rvnnie@github.io</b>
+          <span style="color: white;">:</span>
+          <span class="currdir">~</span>
+          <span style="color: white;">$</span>
+        </label>
+        </span>
+      <!-- input text that checks to see if user presses enter.
+           check input then passes command to execute()-->
+      <input
+        type="text"
+        class="command"
+        id="command"
+        name="command"
+        autocomplete="off"
+        onkeydown="checkInput()"
+      />
+    </div>
+  </body>
+</html>
