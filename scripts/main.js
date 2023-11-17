@@ -68,7 +68,7 @@ function execute(command) {
     } else elem.innerHTML = "";
   } else if (commands[0] == "resume") {
     // redirect to resume (in docs folder)
-    window.location.href = "./docs/Resume.pdf";
+    window.location.href = "../docs/Resume.pdf";
 
     // basic echo command
   } else if (commands[0] == "echo") {
@@ -97,7 +97,7 @@ function execute(command) {
     clone.id = "prev_help";
     elem.appendChild(clone);
   } else if (command == "exit") {
-    window.location.href = "./index.html"
+    window.location.href = "../index.html"
   } else {
     // command not found
     var tag = document.createElement("p");

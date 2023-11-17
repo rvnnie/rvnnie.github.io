@@ -11,13 +11,19 @@
     <!-- Boxicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
+    <!-- Code block CSS -->
+    <link href="../styles/code_blocks.css" rel="stylesheet">
+
     <!-- Components -->
-    <script type="text/javascript" src="./components/navbar.js"></script>
+    <script type="text/javascript" src="../components/navbar.js"></script>
 
   </head>
   <body>
-    <!-- start navbar -->
     <nav-bar />
-  <!-- end navbar -->
+    <!-- TODO lets build a parser to format this instead, this is tedious as hell-->
+    <div class="code-block">
+        <span class="code-keyword code">Hello World text</span><br/>
+        <span class="code-function code">print</span><span class="code-parathesis code">(<span class="code-string code">"Hello world"</span>)</span>
+    </div>
   </body>
 </html>
